@@ -1,0 +1,11 @@
+/home/victor/coding/rust/dev/target/rls/debug/deps/futures_core-231a9fbfa9e99473.rmeta: /home/victor/.cargo/registry/src/github.com-1ecc6299db9ec823/futures-core-0.3.1/src/lib.rs /home/victor/.cargo/registry/src/github.com-1ecc6299db9ec823/futures-core-0.3.1/src/future.rs /home/victor/.cargo/registry/src/github.com-1ecc6299db9ec823/futures-core-0.3.1/src/stream.rs /home/victor/.cargo/registry/src/github.com-1ecc6299db9ec823/futures-core-0.3.1/src/task/mod.rs /home/victor/.cargo/registry/src/github.com-1ecc6299db9ec823/futures-core-0.3.1/src/task/poll.rs /home/victor/.cargo/registry/src/github.com-1ecc6299db9ec823/futures-core-0.3.1/src/task/__internal/mod.rs /home/victor/.cargo/registry/src/github.com-1ecc6299db9ec823/futures-core-0.3.1/src/task/__internal/atomic_waker.rs
+
+/home/victor/coding/rust/dev/target/rls/debug/deps/futures_core-231a9fbfa9e99473.d: /home/victor/.cargo/registry/src/github.com-1ecc6299db9ec823/futures-core-0.3.1/src/lib.rs /home/victor/.cargo/registry/src/github.com-1ecc6299db9ec823/futures-core-0.3.1/src/future.rs /home/victor/.cargo/registry/src/github.com-1ecc6299db9ec823/futures-core-0.3.1/src/stream.rs /home/victor/.cargo/registry/src/github.com-1ecc6299db9ec823/futures-core-0.3.1/src/task/mod.rs /home/victor/.cargo/registry/src/github.com-1ecc6299db9ec823/futures-core-0.3.1/src/task/poll.rs /home/victor/.cargo/registry/src/github.com-1ecc6299db9ec823/futures-core-0.3.1/src/task/__internal/mod.rs /home/victor/.cargo/registry/src/github.com-1ecc6299db9ec823/futures-core-0.3.1/src/task/__internal/atomic_waker.rs
+
+/home/victor/.cargo/registry/src/github.com-1ecc6299db9ec823/futures-core-0.3.1/src/lib.rs:
+/home/victor/.cargo/registry/src/github.com-1ecc6299db9ec823/futures-core-0.3.1/src/future.rs:
+/home/victor/.cargo/registry/src/github.com-1ecc6299db9ec823/futures-core-0.3.1/src/stream.rs:
+/home/victor/.cargo/registry/src/github.com-1ecc6299db9ec823/futures-core-0.3.1/src/task/mod.rs:
+/home/victor/.cargo/registry/src/github.com-1ecc6299db9ec823/futures-core-0.3.1/src/task/poll.rs:
+/home/victor/.cargo/registry/src/github.com-1ecc6299db9ec823/futures-core-0.3.1/src/task/__internal/mod.rs:
+/home/victor/.cargo/registry/src/github.com-1ecc6299db9ec823/futures-core-0.3.1/src/task/__internal/atomic_waker.rs:
