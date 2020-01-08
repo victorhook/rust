@@ -1,0 +1,11 @@
+/home/victor/coding/rust/game/target/debug/deps/wayland_commons-c060eb370517a1e2.rmeta: /home/victor/.cargo/registry/src/github.com-1ecc6299db9ec823/wayland-commons-0.21.13/src/lib.rs /home/victor/.cargo/registry/src/github.com-1ecc6299db9ec823/wayland-commons-0.21.13/src/map.rs /home/victor/.cargo/registry/src/github.com-1ecc6299db9ec823/wayland-commons-0.21.13/src/socket.rs /home/victor/.cargo/registry/src/github.com-1ecc6299db9ec823/wayland-commons-0.21.13/src/utils.rs /home/victor/.cargo/registry/src/github.com-1ecc6299db9ec823/wayland-commons-0.21.13/src/wire.rs
+
+/home/victor/coding/rust/game/target/debug/deps/libwayland_commons-c060eb370517a1e2.rlib: /home/victor/.cargo/registry/src/github.com-1ecc6299db9ec823/wayland-commons-0.21.13/src/lib.rs /home/victor/.cargo/registry/src/github.com-1ecc6299db9ec823/wayland-commons-0.21.13/src/map.rs /home/victor/.cargo/registry/src/github.com-1ecc6299db9ec823/wayland-commons-0.21.13/src/socket.rs /home/victor/.cargo/registry/src/github.com-1ecc6299db9ec823/wayland-commons-0.21.13/src/utils.rs /home/victor/.cargo/registry/src/github.com-1ecc6299db9ec823/wayland-commons-0.21.13/src/wire.rs
+
+/home/victor/coding/rust/game/target/debug/deps/wayland_commons-c060eb370517a1e2.d: /home/victor/.cargo/registry/src/github.com-1ecc6299db9ec823/wayland-commons-0.21.13/src/lib.rs /home/victor/.cargo/registry/src/github.com-1ecc6299db9ec823/wayland-commons-0.21.13/src/map.rs /home/victor/.cargo/registry/src/github.com-1ecc6299db9ec823/wayland-commons-0.21.13/src/socket.rs /home/victor/.cargo/registry/src/github.com-1ecc6299db9ec823/wayland-commons-0.21.13/src/utils.rs /home/victor/.cargo/registry/src/github.com-1ecc6299db9ec823/wayland-commons-0.21.13/src/wire.rs
+
+/home/victor/.cargo/registry/src/github.com-1ecc6299db9ec823/wayland-commons-0.21.13/src/lib.rs:
+/home/victor/.cargo/registry/src/github.com-1ecc6299db9ec823/wayland-commons-0.21.13/src/map.rs:
+/home/victor/.cargo/registry/src/github.com-1ecc6299db9ec823/wayland-commons-0.21.13/src/socket.rs:
+/home/victor/.cargo/registry/src/github.com-1ecc6299db9ec823/wayland-commons-0.21.13/src/utils.rs:
+/home/victor/.cargo/registry/src/github.com-1ecc6299db9ec823/wayland-commons-0.21.13/src/wire.rs:

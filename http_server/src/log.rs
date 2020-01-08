@@ -1,14 +1,26 @@
-use std::fs::{File};
+use std::fs::{File, OpenOptions};
 use std::io::{BufWriter, Write};
-use std::path::{Path};
+use std::path::Path;
 
 extern crate chrono;
 use chrono::{DateTime, Utc};
 
+const DATE_FORMAT: &str = "%d/%m/%y %H:%M:%S";
+
 pub enum LogLevel {
-    info,
-    warning,
-    debug
+    INFO,
+    WARNING,
+    DEBUG,
+}
+
+impl std::fmt::Display for LogLevel {
+    fn fmt(&self, f: &mut std::fmt::Formatter<'_>) -> std::fmt::Result {
+        match *self {
+            LogLevel::DEBUG => write!(f, "DEBUG"),
+            LogLevel::WARNING => write!(f, "WARNING"),
+            LogLevel::INFO => write!(f, "INFO"),
+        }
+    }
 }
 
 pub struct Logger {
@@ -16,69 +28,65 @@ pub struct Logger {
     level: LogLevel,
 }
 
-fn main() {
-
-    let logger = Logger::new("log", LogLevel::info);
-
-}
 
 impl Logger {
 
     pub fn new(root: &str, level: LogLevel) -> Self {
-        
-        let file = File::open(root).or_else(|f| {
-            File::create(root)}
-        ).unwrap();
 
-        let mut writer = BufWriter::new(file);
-        writer.write("test".as_bytes());
-        writer.flush();
-        drop(writer);
-
-        Logger {
+        let logger = Logger {
             root: String::from(root),
             level,
-        }
+        };
 
+        match logger.level {
+            // On INFO level, the logging is appended to the file for each session
+            LogLevel::INFO => {
+                let file = match OpenOptions::new().write(true)
+                .append(true)
+                .open(root) {
+                    Ok(file) => file,
+                    Err(_e) => File::create(root).unwrap()
+                };
+
+            let mut writer = BufWriter::new(file);
+            let date = format!("{}\n\n",Utc::now().format(DATE_FORMAT));
+            writer.write(format!("New session initialized at {} level\n", logger.level).as_bytes());
+            writer.write(date.as_bytes());
+            writer.flush();
+
+            },
+            // On the DEBUG levels, the logging file gets truncated and overwritten each new session
+            LogLevel::DEBUG => {
+                File::create(root).unwrap();
+            },
+            _ => {},
+        };
+
+        return logger;
     }
 
     pub fn set_level(&mut self, level: LogLevel) {
         self.level = level;
     }
 
-}
+    pub fn log(&self, msg: String) {
 
-/*
-impl Log for Logger {
+        let log_msg = match self.level {
+            LogLevel::DEBUG => format!("{}\n", msg),
+            LogLevel::INFO => format!("[{}] {}\n", Utc::now().format(DATE_FORMAT), msg),
+            // Reserved for later use
+            LogLevel::WARNING => format!("[{}] > WARNING: 
+                                     {}\n", Utc::now().format(DATE_FORMAT), msg),
+        };
 
-    fn info(&mut self, msg: &str) {
-        
-        match File::open(self.root) {
-            Ok(file) => {
-                let writer = BufWriter::new(file);
-                let content = match self.level {
-                    LogLevel::debug => {
-                        let date = Utc::now().format("%d/%m/%y %H:%M:%S");
-                    },
-                    LogLevel::info => {},
-                    LogLevel::warning => {},
-                }
+    let file = match OpenOptions::new().write(true)
+                    .append(true).open(&self.root) {
+        Ok(file) => file,
+        Err(_e) => File::create(&self.root).unwrap()
+    };
 
-            }
-            Err(_e) => {},
-        }
+    let mut writer = BufWriter::new(file);
+    writer.write(log_msg.as_bytes());
+    writer.flush();
     }
-
 }
-
-trait Log {
-
-    fn info(&mut self);
-
-    fn warning(&mut self);
-
-    fn debug(&mut self);
-
-}
-
-*/
